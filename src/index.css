@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700&family=Inter:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  [dir="ltr"] {
+    font-family: 'Inter', 'Poppins', sans-serif;
+  }
+
+  [dir="rtl"] {
+    font-family: 'Cairo', 'Noto Sans Arabic', sans-serif;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1.2s ease-out;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 1.2s ease-out 0.4s both;
+  }
+
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 1.2s ease-out 0.8s both;
+  }
+
+  .animate-blob {
+    animation: blob 8s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .animate-scroll {
+    animation: scroll 2s ease-in-out infinite;
+  }
+
+  /* NEW: حركة السهم النازل لمؤشر التمرير */
+  .animate-arrow-drop {
+    animation: arrowDrop 2.5s ease-in-out infinite;
+  }
+
+  /* Moving stripes animation for project card underline */
+  @keyframes underline-stripes {
+    0% {
+      background-position: 0% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .underline-stripes {
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent 0 18px,
+      rgba(61, 90, 79, 0.0) 18px 22px,
+      rgba(61, 90, 79, 0.7) 22px 28px,
+      rgba(90, 128, 104, 0.7) 28px 34px,
+      transparent 34px 44px
+    );
+    background-size: 200% 100%;
+  }
+
+  .animate-underline-stripes {
+    animation: underline-stripes 1.2s linear infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+}
+
+/* NEW: حركة بسيطة للسهم للأسفل كل 2.5 ثانية */
+@keyframes arrowDrop {
+  0% {
+    transform: translateY(-2px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-2px);
+    opacity: 0.6;
+  }
+}
+
+/* Underline glimmer animation for project cards */
+@keyframes underline-shine {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0.0;
+  }
+  10% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateX(120%);
+    opacity: 0.0;
+  }
+}
+
+.animate-underline-shine {
+  animation: underline-shine 900ms ease-out forwards;
+}
