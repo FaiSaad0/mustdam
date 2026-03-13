@@ -1285,8 +1285,7 @@ function App() {
                         : 'text-left pl-[4.75rem] sm:pl-20'
                     }`}
                   >
-                    m.shehab@mustdam.com
-                  </a>
+sales@mustdam.com                  </a>
                 </div>
               </div>
 
