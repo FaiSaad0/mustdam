@@ -23,6 +23,8 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 
+
+import mustdamProfile from './assets/files/mustdam-profile.pdf';
 import logoImg from './assets/logo2.png';
 import Button from './components/Button';
 import ScrollIndicator from './components/ScrollIndicator';
@@ -184,6 +186,17 @@ function ProjectCard({
         </div>
 
         <div className="mt-10 border-t border-gray-200"></div>
+        {project.name === 'Industrial Gases' || project.name === 'الغازات الصناعية' ? (
+  <div className="mt-6 flex justify-center">
+    <a
+      href={mustdamProfile}
+      download
+      className="px-6 py-3 bg-[#3d5a4f] text-white rounded-full text-sm font-semibold hover:bg-[#2d4a3e] transition-all duration-300"
+    >
+      {isRTL ? 'قراءة بروفايل الشركة' : 'Download Company Profile'}
+    </a>
+  </div>
+) : null}
       </div>
 
       <div className="relative z-10 pt-8 flex justify-center">
