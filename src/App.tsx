@@ -247,9 +247,8 @@ function App() {
         title: 'Our Team',
         subtitle: 'The minds driving Mustdam forward',
         members: [
-          { name: 'Abdullah Al-Adel',   role: 'Co-Founder', img: abdullahImg },
           { name: 'Mohammed Al-Ghamdi', role: 'Founder',    img: mohammedImg },
-          { name: 'Amjad Showail',      role: 'Co-Founder', img: amjadImg },
+          { name: 'Abdullah Al-Adel',   role: 'Co-Founder', img: abdullahImg },
         ],
       },
       vision: {
@@ -356,9 +355,8 @@ function App() {
         title: 'فريقنا',
         subtitle: 'العقول التي تقود مستدام نحو مستقبل مستدام',
         members: [
+          { name: 'محمد الغامدي',   role: 'مؤسس',       img: mohammedImg },
           { name: 'عبدالله العادل', role: 'شريك مؤسس', img: abdullahImg },
-          { name: 'محمد الغامدي',   role: 'مؤسس',      img: mohammedImg },
-          { name: 'أمجد شويل',      role: 'شريك مؤسس', img: amjadImg },
         ],
       },
       vision: {
@@ -589,21 +587,14 @@ function App() {
             </div>
           </div>
 
-          {/* Leaf icon */}
-          <div className="flex justify-center mb-8 animate-fade-in">
-            <div className="relative animate-float">
-              <div className="absolute inset-0 bg-[#5a8068]/20 rounded-2xl blur-2xl scale-150 animate-pulse" />
-              <div className="relative w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/15 shadow-lg">
-                <Leaf className="w-8 h-8 text-white drop-shadow" strokeWidth={1.8} />
-              </div>
-            </div>
-          </div>
-
-          {/* Main headline */}
-          <h1 className="text-5xl sm:text-6xl md:text-[5.5rem] lg:text-[6.5rem] font-black text-white leading-[1.02] tracking-[-0.02em] mb-6 animate-fade-in-delay">
-            <span>{t.hero.subtitle}</span>
-            <br />
-            <span className="text-gradient-white opacity-60 text-3xl sm:text-4xl md:text-5xl font-normal">{isRTL ? 'للطاقة المتجددة' : 'for Renewable Energy'}</span>
+          {/* Main headline — brand name bilingual */}
+          <h1 className="animate-fade-in-delay mb-6 leading-none tracking-tight">
+            <span className="block text-6xl sm:text-7xl md:text-[6rem] lg:text-[7.5rem] font-black text-white tracking-[-0.02em]">
+              مستدام
+            </span>
+            <span className="block text-2xl sm:text-3xl md:text-4xl font-light text-white/40 tracking-[0.18em] uppercase mt-2">
+              Mustdam
+            </span>
           </h1>
 
           {/* Tagline */}
